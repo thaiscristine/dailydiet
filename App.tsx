@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components/native';
 import theme from './src/theme';
 import { useFonts, NunitoSans_400Regular, NunitoSans_700Bold } from '@expo-google-fonts/nunito-sans'
 import { Loading } from '@components/Loading';
+import { Routes } from 'src/routes';
 
 export default function App() {
 
@@ -19,8 +20,7 @@ export default function App() {
         backgroundColor='transparent'
         translucent
       />
-      {/* {fontLoaded ? <Routes /> : <Loading />} */}
-      <Loading /> 
+      {fontLoaded ? <Routes /> : <Loading />}
     </ThemeProvider>
   );
 }
