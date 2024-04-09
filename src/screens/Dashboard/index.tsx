@@ -1,12 +1,14 @@
 import React from 'react';
 
 import { Container } from './styles';
-import { Text } from 'react-native';
+import { Header } from '@components/Header';
+import { StatisticBlock } from '@components/StatisticBlock';
 
 export function Dashboard() {
   return (
     <Container>
-      <Text>Dashboard</Text>
+      <Header showBackButton />
+      <StatisticBlock />
     </Container>  
   );
 };
