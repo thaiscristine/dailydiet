@@ -1,6 +1,6 @@
 import logoImg from '../../assets/Logo.png';
 import profileImg from '../../assets/Ellipse.png';
-import { BackButton, Container, Logo, ProfileImg, Title } from "./styles";
+import { BackButton, Container, Logo, ProfileImg } from "./styles";
 
 type HeaderProps = {
     showBackButton?: boolean;
