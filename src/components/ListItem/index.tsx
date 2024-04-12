@@ -14,7 +14,7 @@ export function ListItem({ itemTitle, itemTime, inDietStatus }: ListItemProps) {
         <LeftInfo>
           <Time>{itemTime}</Time>
           <Divider>|</Divider>
-          <Item>{itemTitle}</Item>
+          <Item numberOfLines={1} ellipsizeMode={'tail'}>{itemTitle}</Item>
         </LeftInfo>
         <Status isDiet>{inDietStatus}</Status>
       </Container>

@@ -32,6 +32,7 @@ export const Time = styled.Text`
 export const Item = styled.Text`
   font-size: ${({ theme }) => theme.FONT_SIZE.S}px;
   color: ${({ theme }) => theme.COLORS.GRAY_700};
+  max-width: 230px;
 `;
 
 export const Divider = styled.Text`

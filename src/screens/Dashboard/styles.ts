@@ -16,7 +16,9 @@ export const Title = styled.Text`
 
 export const ListTitle = styled.Text`
   font-size: ${({ theme }) => theme.FONT_SIZE.M}px;
+  font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
   color: ${({ theme }) => theme.COLORS.GRAY_900};
-  margin-top: 10px;
+  background-color: ${({ theme }) => theme.COLORS.WHITE};
+  padding: 20px 0 5px;
 `;
 
