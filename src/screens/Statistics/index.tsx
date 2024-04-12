@@ -1,32 +1,62 @@
-import { Text } from "react-native";
-import { Container } from "./styles";
+import { Text, View } from "react-native";
+import {
+  BackButton,
+  BackIcon,
+  Container,
+  ContainerStatistics,
+  Description,
+  Porcentage,
+  StatisticsCard,
+  Title,
+  StatisticsCardGreen,
+  StatisticsCardRed,
+  ViewColors,
+  Quantity
+} from "./styles";
+import { useNavigation } from "@react-navigation/native";
 
 export function Statistics() {
+
+  const navigation = useNavigation();
+
+  function handleGoBack() {
+    navigation.navigate('dashboard');
+  }
+  
   return (
     <Container>
-      <BackButton>
+
+      <BackButton onPress={handleGoBack}>
         <BackIcon />
       </BackButton>
+
       <Porcentage>100%</Porcentage>
-      <Text>of the meals in the diet</Text>
+      <Description>of the meals in the diet</Description>
+
       <ContainerStatistics>
-        <Text>General Statistics</Text>
+
+        <Title>General Statistics</Title>
+
         <StatisticsCard>
-          <Text>Calories</Text>
-          <Text>2000</Text>
+          <Quantity>22</Quantity>
+          <Description>Best sequence</Description>
         </StatisticsCard>
+
         <StatisticsCard>
-          <Text>Proteins</Text>
-          <Text>200g</Text>
+          <Quantity>22</Quantity>
+          <Description>meals registered</Description>
         </StatisticsCard>
-        <StatisticsCardGreen>
-          <Text>Carbs</Text>
-          <Text>200g</Text>
-        </StatisticsCardGreen>
-        <StatisticsCardRed>
-          <Text>Fats</Text>
-          <Text>200g</Text>
-        </StatisticsCardRed>
+
+        <ViewColors>
+          <StatisticsCardGreen>
+            <Quantity>22</Quantity>
+            <Text>meals in the diet</Text>
+          </StatisticsCardGreen>
+          <StatisticsCardRed>
+            <Quantity>2</Quantity>
+            <Text>meals out of the diet</Text>
+          </StatisticsCardRed>
+        </ViewColors>
       </ContainerStatistics>
     </Container>
   );
