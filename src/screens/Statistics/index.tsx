@@ -15,7 +15,11 @@ import {
 } from "./styles";
 import { useNavigation } from "@react-navigation/native";
 
-export function Statistics() {
+type StatisticScreenProps = {
+  isGreen?: boolean;
+};
+
+export function Statistics({ isGreen = true }: StatisticScreenProps) {
 
   const navigation = useNavigation();
 
@@ -24,7 +28,7 @@ export function Statistics() {
   }
   
   return (
-    <Container>
+    <Container isGreen>
 
       <BackButton onPress={handleGoBack}>
         <BackIcon />

@@ -2,7 +2,9 @@ export declare global {
     namespace ReactNavigation {
         interface RootParamList {
             dashboard: undefined;
-            statistics: undefined;
+            statistics: {
+                isGreen: boolean;
+            };
         }
     }
 }

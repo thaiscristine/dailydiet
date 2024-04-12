@@ -35,6 +35,6 @@ export const Icon = styled(ArrowUpRight).attrs<StatisticBlockComponentStyleProps
 export const Porcentage = styled.Text`
   font-size: ${({ theme }) => theme.FONT_SIZE.XXL}px;
   color: ${({ theme }) => theme.COLORS.GRAY_700};
-  font-weight: bold;
+  font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
   margin-bottom: 5px;
 `;

@@ -12,7 +12,7 @@ export function StatisticBlock({ isGreen = true }: StatisticBlockProps) {
   const navigation = useNavigation();
 
   function handleOpenStatistics() {
-    navigation.navigate('statistics');
+    navigation.navigate('statistics', { isGreen });
   }
   
   return (

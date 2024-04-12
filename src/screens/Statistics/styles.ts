@@ -2,9 +2,15 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import styled from "styled-components/native";
 import { CaretLeft } from 'phosphor-react-native';
 
-export const Container = styled(SafeAreaView)`
+export type IsPorcentagemOver50 = true | false;
+
+type StatisticsComponentStyleProps = {
+  isGreen: IsPorcentagemOver50;
+}
+
+export const Container = styled(SafeAreaView)<StatisticsComponentStyleProps>`
   flex: 1;
-  background-color: ${({ theme }) => theme.COLORS.GREEN_LIGHT};
+  background-color: ${({ theme, isGreen }) => isGreen ? theme.COLORS.GREEN_LIGHT : theme.COLORS.RED_LIGHT};
 `;
 
 export const BackButton = styled.TouchableOpacity`

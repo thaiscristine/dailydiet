@@ -45,7 +45,7 @@ export function Dashboard() {
   return (
     <Container>
       <Header showBackButton />
-      <StatisticBlock />
+      <StatisticBlock isGreen />
       <Title>Meals</Title>
       <Button></Button>
       {isLoading ? <Loading /> :
