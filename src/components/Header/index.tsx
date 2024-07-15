@@ -1,19 +1,26 @@
 import logoImg from '../../assets/Logo.png';
 import profileImg from '../../assets/Ellipse.png';
-import { BackButton, Container, Logo, ProfileImg } from "./styles";
+import { BackButton, Container, Logo, ProfileImg, Title } from "./styles";
 
 type HeaderProps = {
-    showBackButton?: boolean;
+  showBackButton?: boolean;
+  title?: string;
 };
-export function Header({ showBackButton = false }: HeaderProps) {
+export function Header({ showBackButton = false, title='' }: HeaderProps) {
   
   return (
     <Container>
-    {!showBackButton && (
-      <BackButton ></BackButton>
-    )}
-    <Logo source={logoImg} />
-    <ProfileImg source={profileImg} />
+      {!showBackButton ? (
+        <>
+          <BackButton ></BackButton>
+          <Title></Title>
+          </>
+      ) : (
+        <>
+          <Logo source={logoImg} />
+          <ProfileImg source={profileImg} />
+        </>
+      )}
   </Container>
   );
 }

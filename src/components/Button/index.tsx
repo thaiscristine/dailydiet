@@ -2,9 +2,15 @@ import { Container, Title, Icon } from "./styles";
 
 import { Text } from "react-native"
 
-export function Button() {
+
+type NewMealnButtonProps = {
+  handler: () => void;
+};
+
+export function Button({ handler }: NewMealnButtonProps) {
   return (
     <Container
+        onPress={handler}
         // colorType={colorType}
         // {...rest}
     >

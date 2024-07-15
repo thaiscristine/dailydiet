@@ -8,8 +8,11 @@ import { ListItem } from '@components/ListItem';
 import { Loading } from '@components/Loading';
 
 import { SectionList } from 'react-native';
+import { useNavigation } from "@react-navigation/native";
 
 export function Dashboard() {
+  
+  const navigation = useNavigation();
 
   const [isLoading, setIsLoading] = React.useState(false);
   const CONTENT = [
@@ -41,13 +44,17 @@ export function Dashboard() {
       ],
     },
   ];
+
+  function handleGoNewMeal() {
+    navigation.navigate('newMeal');
+  }
       
   return (
     <Container>
       <Header showBackButton />
       <StatisticBlock isGreen />
       <Title>Meals</Title>
-      <Button></Button>
+      <Button handler={handleGoNewMeal}></Button>
       {isLoading ? <Loading /> :
         <SectionList
           sections={CONTENT}

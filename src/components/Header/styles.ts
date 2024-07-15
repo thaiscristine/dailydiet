@@ -1,4 +1,4 @@
-import styled from "styled-components/native";
+import styled, { css } from "styled-components/native";
 
 export const Container = styled.View`
   width: 100%;
@@ -19,3 +19,16 @@ export const ProfileImg = styled.Image`
     width: 37px;
     height: 37px;
 `;
+
+export const Title = styled.Text`
+    ${({theme}) => css`
+        font-family: ${theme.FONT_FAMILY.BOLD};
+        font-size: ${theme.FONT_SIZE.TITLE.S}px;
+        color: ${theme.COLORS.BASE.GRAY_100};
+        text-align: center;
+        margin-top: 24px;
+        margin-right: 32px;
+        
+    `}
+`
+;
