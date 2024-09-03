@@ -1,24 +1,13 @@
-import { BackIcon, Container, Input, Title, Button } from "./styles";
-import { BackButton } from "@components/Header/styles";
-import { useNavigation } from "@react-navigation/native";
-
+import { Header } from "@components/Header";
+import { Container } from "./styles";
+import { Form } from "@components/Form";
 
 export function NewMeal() {
-  const navigation = useNavigation();
-
-  function handleGoNewMeal() {
-    navigation.navigate('dashboard');
-  }
+  
     return (
       <Container>
-          <BackButton onPress={handleGoNewMeal}>
-            <BackIcon />
-          </BackButton>
-          <Title>Adicionar nova refeição</Title>
-          <Input placeholder="Nome da refeição" />
-          <Input placeholder="Calorias" />
-          <Input placeholder="Data" />
-          <Button>add</Button>
+        <Header title="Adicionar nova refeição"></Header>
+        <Form></Form>
         </Container>
     );
 } 
